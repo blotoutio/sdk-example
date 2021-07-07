@@ -1,4 +1,4 @@
-  const config = {
+const config = {
   mode: "development",
   entry: {
     "consent-simple": __dirname + "/examples/consent-simple/index.jsx",

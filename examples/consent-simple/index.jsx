@@ -2,17 +2,23 @@ import ReactDOM from 'react-dom'
 import React, {useState} from 'react'
 import {SignatuProvider} from '@signatu/sdk'
 import {ConsentCheckbox} from '@signatu/consent-react';
+import { init } from '@blotoutio/sdk-core'
+
+init({
+  token: 'BKYHTD5A4C9HSCB',
+  endpointUrl: 'https://stage.blotout.io'
+})
+
 
 const consentTarget = {
     /** The ID of the subject */
-     subject: 'a-sample-subject-id',
+     subject: window.localStorage.getItem("_trendsUser"),
     /** The ID of the consent target, i.e., a description of what is given consent to */
-    target: 'sdk-examples/consent-simple'
+    target: 'sdk-examples/cerse'
 }
-
-
 const ConsentSimple = () =>  {
-    const [accessToken, setAccessToken] = useState()
+
+    const [accessToken, setAccessToken] = useState();
     return (
         <>
             <input onChange={ev => setAccessToken(ev.target.value)} placeholder="signatu access token"/>

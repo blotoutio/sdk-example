@@ -1,8 +1,12 @@
 # Signatu SDK Example
 
+
 ## Quickstart
 
 ```sh
+npm add axios
+npm i --legacy-peer-deps
+npm i @blotoutio/sdk-core
 npm start
 ```
 
